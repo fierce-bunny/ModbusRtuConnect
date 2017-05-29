@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ModbusConnect</string>
+
+    <string name="modbus_err_0">Response object equals null</string>
+    <string name="modbus_err_1">Error code 1: Illegal Function</string>
+    <string name="modbus_err_2">Error code 2: Illegal Data Address</string>
+    <string name="modbus_err_3">Error code 3: Illegal Data Value</string>
+    <string name="modbus_err_4">Error code 4: Slave Device Failure</string>
+    <string name="modbus_err_5">Error code 5: Acknowledge</string>
+    <string name="modbus_err_6">Error code 6: Slave Device Busy</string>
+    <string name="modbus_err_7">Error code 7: Negative Acknowledge</string>
+    <string name="modbus_err_8">Error code 8: Memory Parity Error</string>
+    <string name="modbus_err_9">Error code 9: Gateway Path Unavailable</string>
+    <string name="modbus_err_10">Error code 10: Gateway Target Device Failed to Respond</string>
+    <string name="modbus_err_unknown">Unknown error</string>
+    <string name="modbus_err_invalid_resp">Invalid response</string>
+    <string name="modbus_err_unknown_func_code">Unknown function code</string>
+
+</resources>

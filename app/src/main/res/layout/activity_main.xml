@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Connect"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReadRegs"
+        tools:text="Text here" />
+
+    <Button
+        android:id="@+id/buttonWriteRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="write reg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonConnect" />
+
+    <Button
+        android:id="@+id/buttonWriteCoil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="write coil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonWriteRegister" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="86dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="69dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1001"
+        app:layout_constraintRight_toRightOf="@+id/buttonWriteCoil"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintRight_toRightOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/etRegNum"
+        android:layout_width="86dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="69dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintRight_toRightOf="@+id/buttonWriteRegister"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etRegVal"
+        android:layout_width="86dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="111"
+        app:layout_constraintRight_toRightOf="@+id/buttonWriteRegister"
+        app:layout_constraintTop_toBottomOf="@+id/etRegNum" />
+
+    <Button
+        android:id="@+id/buttonWriteAllCoils"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="wr coils"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonWriteCoil" />
+
+
+    <Button
+        android:id="@+id/buttonReadRegs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="read regs"
+        app:layout_constraintTop_toBottomOf="@+id/etRegVal"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReadCoils"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="read coils"
+        app:layout_constraintTop_toBottomOf="@+id/etRegVal"
+        app:layout_constraintLeft_toRightOf="@+id/buttonReadRegs" />
+
+
+</android.support.constraint.ConstraintLayout>
