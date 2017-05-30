@@ -16,6 +16,7 @@ import com.modbusconnect.rtuwrapper.processing.MessageProcessor;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.modbusconnect.rtuwrapper.ModbusConstants.DEFAULT_WAIT_RESPONSE_TIMEOUT;
 import static com.modbusconnect.rtuwrapper.ModbusConstants.EXCEPTION_OFFSET;
 import static com.modbusconnect.rtuwrapper.ModbusConstants.INVALID_RESPONSE_EXCEPTION;
 import static com.modbusconnect.rtuwrapper.ModbusConstants.MAX_SLAVE_ID;
@@ -53,7 +54,6 @@ public class ModbusRtuTransaction implements UsbSerialInterface.UsbReadCallback 
     public void onReceivedData(byte[] bytes) {
         for (byte b : bytes) {
             responseMessage.add(b);
-            System.out.println(b); // TODO: 29.05.17 remove
         }
     }
 
@@ -83,6 +83,14 @@ public class ModbusRtuTransaction implements UsbSerialInterface.UsbReadCallback 
         int responseSizeNoCrc = getResponseExpectedSize(request.getFunctionCode());
         boolean exceptionChecked = false;
         boolean isException = false;
+
+        //wait for response
+        try {
+            Thread.sleep(DEFAULT_WAIT_RESPONSE_TIMEOUT);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         while (responseMessage.size() < responseSizeNoCrc + 1) {
             if (!exceptionChecked && responseMessage.size() >= 2) {
                 if (isExceptionPreliminary(responseMessage.get(1))) {

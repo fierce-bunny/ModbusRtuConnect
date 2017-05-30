@@ -15,6 +15,7 @@ public interface ModbusConstants {
 
     int DEFAULT_SLAVE_ID = 1;
 
+    long DEFAULT_WAIT_RESPONSE_TIMEOUT = 50;
     int DEFAULT_TIMEOUT = 3000;
     boolean DEFAULT_RECONNECTING = false;
     int DEFAULT_RETRIES = 3;
