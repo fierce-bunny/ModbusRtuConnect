@@ -1,5 +1,6 @@
-# ModbusRtuConnect
+# ModbusRtuConnect (---currently under construction---)
 Android Modbus Serial RS232 wrapper
+(tested on MicroSmart FC6A-C16R1CE)
 
 Functions:
 Read coil (0x01);
